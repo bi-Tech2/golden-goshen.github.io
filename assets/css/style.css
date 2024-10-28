@@ -211,54 +211,234 @@ body.active { overflow: hidden; }
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-.hero-layout{
+.hero-layout {
   width: 100%;
   height: 90dvh;
-  background-image: url(../images/img/backg1.jpg);
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
   position: relative;
-  border-image-width: 100%;
-  filter: brightness(90deg);
+  overflow: hidden; /* Hide overflowing elements */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
   margin-top: 60px;
-  flex-wrap: wrap;
   padding: 20px;
 }
-.hero-txt{
-  max-width: 700px;
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  z-index: 1; /* Set the slider behind the text */
 }
-.hero-text-header{
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out; /* Fade transition */
+  position: absolute; /* Positioning for layering */
+  filter: brightness(30%); /* Adjust brightness here (70% means 30% darker) */
+}
+
+.slide1 {
+  background-image: url(../images/img/backg1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide2 {
+  background-image: url(../images/img/backg2.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.slide3 {
+  background-image: url(../images/img/backg3.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.hero-txt {
+  max-width: 700px;
+  text-align: center;
+  position: relative; /* Set relative to overlay on the slider */
+  z-index: 2; /* Ensure text is above the slider */
+}
+
+.hero-text-header {
   font-size: 6.5rem;
   font-weight: 900;
   color: aliceblue;
 }
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
 
-/* .hero-layout::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background: inherit;
-  filter: blur(30px);
-} */
-.hero-img{
-  width: 450px;
-  height: auto;
-}
-.hero-img img{
+/* Basic styling for the about section */
+.about-section {
   width: 100%;
-}
-.about-layout{
-  background-color: rgb(216, 237, 255);
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive styling */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-header {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.about-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+  .about-header {
+      font-size: 2rem;
+  }
+}
+/*-----------------------------------*\
+  #WHAT WE OFFER
+\*-----------------------------------*/
+/* General Section Styling */
+.what-we-offer {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  font-size: 4rem;
+  color: hsl(210, 90%, 25%);
+  margin-bottom: 20px;
+}
+
+.section-txt{
+  color: #1b2d4a;
+  margin-bottom: 70px;
+}
+/* Card Container Styling */
+.offer-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.ironman, .captainamerica, .thor, .hulk, .spiderman, .blackwidow {
+  position: relative;
+  width: 350px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(1, 13, 255, 0.1);
+  background-color: #fff;
+  text-align: left;
+  overflow: visible;
+  transition: transform 0.3s ease;
+  margin-top: 14px;
+}
+
+.ironman:hover, .captainamerica:hover, .thor:hover, .hulk:hover, .spiderman:hover, .blackwidow:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Styling */
+.icon-container {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: hsl(210, 65%, 20%); /* Icon background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iconn {
+  font-size: 30px;
+  color: white;
+}
+
+/* Text Styling */
+.card-header {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #031026;
+  margin-top: 20px;
+}
+
+.card-body {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .offer-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+}
 
 .section-title { margin-block-start: 10px; }
 
@@ -359,7 +539,7 @@ body.active { overflow: hidden; }
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--rich-black-fogra-39);
+  background-color: hsla(210, 79%, 15%, 0.945);
   padding: 130px 16px;
   z-index: 1;
   transition: 0.5s var(--cubic-in);
@@ -532,14 +712,6 @@ body.active { overflow: hidden; }
 
 
   /**
-   * ABOUT
-   */
-
-  .about-card .card-text { font-size: var(--fs-4); }
-
-
-
-  /**
    * BLOG
    */
 
@@ -656,16 +828,6 @@ body.active { overflow: hidden; }
   .navbar-link {
     margin-block-end: 0;
     font-size: var(--fs-5);
-  }
-
-
-  /**
-   * ABOUT
-   */
-
-  .about .container {
-    grid-template-columns: 0.8fr 1fr;
-    align-items: flex-end;
   }
 
 

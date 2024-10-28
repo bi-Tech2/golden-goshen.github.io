@@ -80,3 +80,36 @@ const revealOnScroll = function () {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showNextSlide() {
+    slides[currentIndex].style.opacity = 0; // Fade out current slide
+    currentIndex = (currentIndex + 1) % totalSlides; // Move to next slide
+    slides[currentIndex].style.opacity = 1; // Fade in next slide
+}
+
+// Show the first slide
+slides[currentIndex].style.opacity = 1;
+
+// Change slides every 5 seconds
+setInterval(showNextSlide, 5000);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutSection = document.querySelector(".about-section");
+
+  function handleScrollAnimation() {
+      const sectionPosition = aboutSection.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+
+      if (sectionPosition < screenPosition) {
+          aboutSection.classList.add("show");
+      }
+  }
+
+  window.addEventListener("scroll", handleScrollAnimation);
+});
