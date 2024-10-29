@@ -213,7 +213,7 @@ body.active { overflow: hidden; }
 \*-----------------------------------*/
 .hero-layout {
   width: 100%;
-  height: 90dvh;
+  height: 100dvh;
   position: relative;
   overflow: hidden; /* Hide overflowing elements */
   display: flex;
@@ -245,20 +245,34 @@ body.active { overflow: hidden; }
 }
 
 .slide1 {
-  background-image: url(../images/img/backg1.jpg);
+  background-image: url(../images/backg1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .slide2 {
-  background-image: url(../images/img/backg2.jpg);
+  background-image: url(../images/pexels-max-fischer-5212697.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
 }
 
 .slide3 {
-  background-image: url(../images/img/backg3.jpg);
+  background-image: url(../images/pexels-yankrukov-8199562.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.slide4 {
+  background-image: url(../images/r1.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.slide5 {
+  background-image: url(../images/r2.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -270,86 +284,209 @@ body.active { overflow: hidden; }
   position: relative; /* Set relative to overlay on the slider */
   z-index: 2; /* Ensure text is above the slider */
 }
-
+.search-icon{
+  background-color: hsl(210, 97%, 35%);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 6px;
+  border-radius: 50%;
+}
 .hero-text-header {
   font-size: 6.5rem;
   font-weight: 900;
   color: aliceblue;
 }
+
+
+/* Base overlay container styling */
+.ven {
+  position: fixed; /* Keep it in view and centered */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 29, 62, 0.979); /* Semi-transparent dark background */
+  z-index: 1000; /* Ensure it stays on top */
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Show overlay when active */
+.ven.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Input container styling */
+.in {
+  background: hsl(210, 81%, 15%);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  width: 86%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
-/* Basic styling for the about section */
-.about-section {
-  width: 100%;
-  padding: 50px 20px;
-  background-color: #cfd4ff;
+
+/* Container for About Us section */
+.about-us {
   display: flex;
-  color: black;
-  width: 100%;
   align-items: center;
-  justify-content: center;
-  z-index: 5;
-  align-items: center;
-  overflow: hidden;
+  padding: 50px;
+  background-color: #f8f9fa;
+  gap: 40px;
 }
 
+/* Text content styling */
 .about-content {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  max-width: 1200px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  max-width: 50%;
 }
 
-/* Responsive styling */
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.about-title {
+  font-size: 3.5rem;
+  color: #12233c;
+  margin-bottom: 20px;
 }
 
 .about-text {
-  max-width: 600px;
-}
-
-.about-header {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #313a5f;
+  line-height: 1.9;
   margin-bottom: 15px;
 }
 
-.about-description {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 10px;
+.learn-more-btn {
+  display: inline-block;
+  padding: 20px 20px;
+  background-color: hsl(210, 65%, 20%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.about-list {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: #555;
+.learn-more-btn:hover {
+  background-color: hsl(210, 90%, 25%);
+  color: #e5e5e5;
 }
 
-.about-list li {
-  margin-bottom: 8px;
+/* Image container styling */
+.about-image-container {
+  position: relative;
+  max-width: 50%;
 }
 
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
 
+/* Hover effect on the image */
+.about-image-container:hover .about-image {
+  transform: scale(1.05);
+}
+
+/* Overlay effect on image */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(0, 33, 67, 0.6), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.about-image-container:hover .image-overlay {
+  opacity: 1;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .about-content {
-      flex-direction: column;
-      align-items: center;
+  .about-us {
+    flex-direction: column;
+    padding: 30px;
   }
-  .about-header {
-      font-size: 2rem;
+
+  .about-content, .about-image-container {
+    max-width: 100%;
   }
 }
+
+/* Input field styling */
+.in .inp {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #283365;
+  border-radius: 4px;
+  outline: none;
+  background: #e5e5e5;
+}
+
+/* Search button styling */
+.in .btn {
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.in .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  padding: 0 13px;
+  right: 30px;
+  background: hsl(210, 65%, 20%);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d; /* Change color on hover */
+}
+
+/* Prevent scrolling when overlay is active */
+.no-scroll {
+  overflow: hidden;
+}
+
+
+
+
+
 /*-----------------------------------*\
   #WHAT WE OFFER
 \*-----------------------------------*/
@@ -368,6 +505,7 @@ body.active { overflow: hidden; }
 
 .section-txt{
   color: #1b2d4a;
+  font-size: 21px;
   margin-bottom: 70px;
 }
 /* Card Container Styling */
@@ -390,6 +528,11 @@ body.active { overflow: hidden; }
   overflow: visible;
   transition: transform 0.3s ease;
   margin-top: 14px;
+}
+@media (max-width: 400px) {
+  .ironman, .captainamerica, .thor, .hulk, .spiderman, .blackwidow{
+    width: 330px;
+  }
 }
 
 .ironman:hover, .captainamerica:hover, .thor:hover, .hulk:hover, .spiderman:hover, .blackwidow:hover {
@@ -442,70 +585,177 @@ body.active { overflow: hidden; }
 
 @media (max-width: 500px) {
   .hero-text-header {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 2.98rem;
+    font-weight: 800;
+    margin-bottom: 10px;
   }
 }
 /*-----------------------------------*\
   #STUDY PROGGRAMES
 \*-----------------------------------*/
-
-.study-options{
-  width: 100%;
-  padding: 20px;
-
-}
-.m{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+/* Container styling */
+.study-options {
+  text-align: center;
+  padding: 3rem 40px;
 }
 
-.m h2{
-  color: #f6f9ff;
-  font-size: 4rem;
-}
-.study-grid{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 4rem;
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #f8f8f8;
 }
 
-.yell{
-  width: 350px;
-  height: 300px;
-  position: relative;
-  background:hsl(0, 0%, 0%);
-  border-radius: 10px;
-}
-.k{
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-}
-
-.section-title { margin-block-start: 10px; }
-
-.img-holder {
-  aspect-ratio: var(--width) / var(--height);
-  overflow: hidden;
-  background-color: var(--light-gray);
-}
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-2);
-}
-
-.grid-list {
+/* Grid layout for options */
+.study-grid {
   display: grid;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 3rem;
 }
+
+.study-grid > div {
+  position: relative;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+.study-grid > div:hover {
+  transform: translateY(-5px);
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(59, 53, 166, 0.089), rgba(17, 25, 60, 0.916)); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+
+/* Text container styling */
+.k {
+  position: absolute;
+  padding: 1.5rem;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+}
+
+.option-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.option-description {
+  font-size: 1.111rem;
+  color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .option-title {
+    font-size: 1.5rem;
+  }
+  .option-description {
+    font-size: 0.95rem;
+  }
+}
+
+  /* FILTER SECTION STYLES */
+  .filter-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f5f7ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Section Title */
+  .section-tit {
+    font-size: 3.5rem;
+    color: hsl(210, 65%, 20%);
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .filter-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #2f333b;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 5px;
+  }
+
+  .filter-button.active,
+  .filter-button:hover {
+    background-color: hsl(210, 97%, 35%);
+    color: #fff;
+  }
+
+  /* Content Area */
+  .filter-content {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .filter-content.active {
+    display: block;
+  }
+
+  .filter-content-title {
+    font-size: 1.5em;
+    color: hsl(210, 100%, 45%);
+    margin-bottom: 10px;
+  }
+
+  .filter-content-description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 
 .text-center { text-align: center; }
 
@@ -523,6 +773,169 @@ body.active { overflow: hidden; }
   opacity: 1;
   transform: translate(0);
 }
+
+
+  /* FAQ Section Styles */
+  .faq-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+    background-color: hsl(210, 65%, 20%);
+  }
+
+  .section-title {
+    font-size: 2em;
+    color: #f9f9f9;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /* FAQ Item */
+  .faq-item {
+    margin-bottom: 15px;
+  }
+
+  .faq-question {
+    width: 100%;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .faq-question:hover,
+  .faq-question.active {
+    background-color: hsl(218, 100%, 45%);
+    color: #fff;
+  }
+
+  .icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+
+  /* Answer Content */
+  .faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Toggle Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Rotate Icon on Active State */
+  .faq-question.active .icon {
+    transform: rotate(45deg);
+  }
+
+  /* CTA Section Styling */
+  .cta-section {
+    color: #ffffff;
+    padding: 40px 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px 0;
+    max-width: 100%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-title {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .cta-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    background-color: #ffffff;
+    color: hsl(210, 65%, 20%);
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 12px 15px;
+    max-width: 150px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: hsl(210, 65%, 20%);
+    color: #ffffff;
+    box-shadow: 0 0 3px gainsboro;
+  }
+
+
+
+
+
+
+@media (max-width: 400px) {
+  .faq-section{
+    padding: 40px 10px;
+  }
+  .filter-section{
+    padding: 40px 10px;
+  }
+  .study-options{
+    padding: 40px 10px;
+  }
+  .cta-section{
+    padding: 40px 10px;
+  }
+  .cta-title {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .cta-description {
+    font-size: .9em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+
 
 
 
