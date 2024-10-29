@@ -35,12 +35,19 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/backg2.jpg">
 
 </head>
 
 <body>
-
+  <div class="ven" id="ven">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="in">
+      <input type="text" name="" id="" class="inp" placeholder="Search here">
+      <button class="btn" type="submit">Search</button>
+    </div>
+  </div>
+  
   <!-- 
     - #HEADER
   -->
@@ -125,15 +132,15 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link" data-nav-link>Contacts</a>
+              <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
             </li>
 
           </ul>
-
-          <a href="#" class="btn btn-primary">Get started</a>
+          
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="btn btn-primary">Apply Now</a>
 
         </nav>
-
+        <button class="search-bar" id="searchTogg" style="position: absolute; top: initial; right: 16%;"><ion-icon name="search-outline" class="search-icon"></ion-icon></button>
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="span"></span>
           <span class="span"></span>
@@ -159,6 +166,8 @@
             <div class="slide slide1"></div>
             <div class="slide slide2"></div>
             <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
+            <div class="slide slide5"></div>
         </div>
         <div class="hero-txt">
             <h2 class="hero-text-header">Lorem ipsum dolor sit amet Ut, vitae?</h2>
@@ -173,32 +182,34 @@
       <!--
       #ABOUT SECTION
       -->
-      <!-- <div class="about-section" id="about">
+      <section class="about-us">
         <div class="about-content">
-            <div class="about-text">
-                <h2 class="about-header" style="color: green;">About Our School</h2>
-                <p class="about-description">Our school is dedicated to nurturing a love for learning and encouraging students to excel in all areas of life. We provide a supportive environment that promotes both academic excellence and personal growth.</p>
-                <p class="about-description">With a dedicated faculty and a wide range of extracurricular activities, we ensure that every student finds their path to success.</p>
-                <ul class="about-list">
-                    <li>Experienced and supportive faculty</li>
-                    <li>Modern learning facilities</li>
-                    <li>Inclusive and diverse environment</li>
-                    <li>Varied extracurricular activities</li>
-                    <li>Focus on holistic development</li>
-                </ul>
-            </div>
-            <div class="about-image">
-                <video style="border-radius: 10px;" src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" alt="Our School" controls></video>
-            </div>
+          <h2 class="about-title">About Us</h2>
+          <p class="about-text">
+            Welcome to our platform! We are dedicated to providing top-quality educational experiences to empower learners around the world. Our programs are designed to nurture curiosity, build skills, and foster a community of passionate learners. Join us in shaping the future of education!
+          </p>
+          <p class="about-text">
+            Through our carefully crafted programs, we provide both knowledge and resources to help individuals excel in their personal and professional lives. Dive into our world, where innovation meets education!
+          </p>
+          <a href="about.html" class="learn-more-btn btn">Learn More</a>
         </div>
-    </div> -->
-    
-<!-- CTA SECTION -->
+        <div class="about-image-container">
+          <img src="assets/images/pexels-armin-rimoldi-5553055.jpg" alt="About Us Image" class="about-image">
+          <div class="image-overlay"></div>
+        </div>
+      </section>
+      
+
+
+
+
+
+      <!-- CTA SECTION -->
 <div class="cta-section">
   <div class="cta-content">
     <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
     <p class="cta-description">Join our community and gain access to world-class resources, expert instructors, and a path to achieving your goals. Don’t wait—enroll now and take the first step!</p>
-    <a href="#enroll" class="cta-button">Get Started</a>
+    <a href="#enroll" class="cta-button">Apply Now</a>
   </div>
 </div>
 
@@ -271,42 +282,42 @@
     <h3 class="section-subtitle" style="margin-bottom: 50px;">Explore our diverse range of academic programs designed to prepare you for success.</h3>
   </div>
   <div class="study-grid">
-    <div class="science yell" style="background-image: url(./assets/images/img/image12.jpeg);">
+    <div class="science yell" style="background-image: url(./assets/images/pexels-pixabay-256417.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Learn English Language</h3>
         <p class="option-description">Learning English enhances communication skills, opens career opportunities, and enriches cultural understanding...</p>
       </div>
     </div>
-    <div class="engineering yell" style="background-image: url(./assets/images/gallery-4.jpg);">
+    <div class="engineering yell" style="background-image: url(./assets/images/pexels-tuan-pm-1320993433-29106273.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Foundation</h3>
         <p class="option-description">Our Foundation program prepares students for higher education by building essential skills and knowledge...</p>
       </div>
     </div>
-    <div class="arts yell" style="background-image: url(./assets/images/service-3.jpg);">
+    <div class="arts yell" style="background-image: url(./assets/images/pexels-olly-3768126.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Undergraduate</h3>
         <p class="option-description">An Undergraduate program offers a degree in various fields, providing in-depth knowledge, critical thinking skills, and practical experience, ultimately preparing students for careers or further studies in their chosen area.</p>
       </div>
     </div>
-    <div class="business yell" style="background-image: url(./assets/images/service-1.jpg);">
+    <div class="business yell" style="background-image: url(./assets/images/pexels-rdne-7713173.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">HND Top-up</h3>
         <p class="option-description">An HND Top-Up program allows students with a Higher National Diploma to gain a full bachelor's degree by completing one additional year of study, focusing on advanced knowledge and skills.</p>
       </div>
     </div>
-    <div class="it yell" style="background-image: url(./assets/images/service-2.jpg);">
+    <div class="it yell" style="background-image: url(./assets/images/ppop.webp);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Pre Master</h3>
         <p class="option-description">A Pre-Master's program prepares students for graduate-level study, enhancing academic skills, English proficiency, and subject knowledge to ensure a smooth transition into a master's degree.</p>
       </div>
     </div>
-    <div class="medicine yell" style="background-image: url(./assets/images/gallery-3.jpg);">
+    <div class="medicine yell" style="background-image: url(./assets/images/pexels-karolina-grabowska-8106655.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Postgraduate PhD/Research</h3>
@@ -314,14 +325,14 @@
       </div>
     </div>
     <!-- Additional Study Program Cards -->
-    <div class="law yell" style="background-image: url(./assets/images/gallery-4.jpg);">
+    <div class="law yell" style="background-image: url(./assets/images/pexels-sora-shimazaki-5669619.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Law</h3>
         <p class="option-description">Our Law program provides comprehensive legal training, critical thinking, and ethical reasoning skills, preparing students for legal practice or further specialization.</p>
       </div>
     </div>
-    <div class="business-management yell" style="background-image: url(./assets/images/gallery-3.jpg);">
+    <div class="business-management yell" style="background-image: url(./assets/images/pexels-yankrukov-7691694.jpg);">
       <div class="overlay"></div>
       <div class="k">
         <h3 class="option-title">Business Management</h3>
@@ -343,7 +354,7 @@
   <div id="mission" class="filter-content active">
     <h3 class="filter-content-title">Our Mission</h3>
     <p class="filter-content-description">
-      Our mission is to empower individuals through accessible, high-quality education. We aim to create a supportive learning environment that nurtures growth, encourages curiosity, and prepares students to make meaningful contributions to society.
+      Our mission is to improve learners' experiences through personalized academic program guidance, fostering student-centered learning, and ensuring effective knowledge transfer to help them achieve their goals.
     </p>
   </div>
 
@@ -351,7 +362,7 @@
   <div id="vision" class="filter-content">
     <h3 class="filter-content-title">Our Vision</h3>
     <p class="filter-content-description">
-      Our vision is to be a globally recognized institution known for academic excellence, innovation, and societal impact. We aspire to inspire and equip students to lead and shape the future through their knowledge, integrity, and compassion.
+      We aspire to become the leading global authority, providing individuals with comprehensive and unparalleled support in achieving their educational and talent development goals.
     </p>
   </div>
 </div>
@@ -382,37 +393,113 @@
   <!-- FAQ Item 1 -->
   <div class="faq-item">
     <button class="faq-question" onclick="toggleAnswer(1)">
-      What programs do you offer?
+      What are the entry requirements for international students?
       <span class="icon">+</span>
     </button>
     <div class="faq-answer" id="answer-1">
-      <p>We offer a range of programs including foundation courses, undergraduate degrees, HND top-up, pre-master's, postgraduate research programs, and specialized language courses.</p>
+      <p>The entry requirements vary by university and course but typically include academic qualifications, English language proficiency (such as IELTS or TOEFL scores), and sometimes a personal statement or interview. </p>
     </div>
   </div>
 
   <!-- FAQ Item 2 -->
   <div class="faq-item">
     <button class="faq-question" onclick="toggleAnswer(2)">
-      How do I apply for a program?
+      How do I apply for a student visa?
       <span class="icon">+</span>
     </button>
     <div class="faq-answer" id="answer-2">
-      <p>You can apply through our online portal. Visit the "Apply Now" page, select your program of interest, and fill in the required information. Our admissions team will guide you through the process.</p>
+      <p>International students must apply for a Tier 4 (General) student visa. To do this, you need to have an acceptance letter from a UK institution, proof of sufficient funds to cover tuition and living expenses, and health insurance. </p>
     </div>
   </div>
 
   <!-- FAQ Item 3 -->
   <div class="faq-item">
     <button class="faq-question" onclick="toggleAnswer(3)">
-      Are scholarships available?
+      What are the tuition fees for international students?
       <span class="icon">+</span>
     </button>
     <div class="faq-answer" id="answer-3">
-      <p>Yes, we offer scholarships based on academic performance and financial need. Please check our "Scholarships" page for detailed eligibility criteria and application deadlines.</p>
+      <p>Tuition fees for international students can range from £10,000 to £38,000 per year, depending on the course and university. It's essential to check the specific fees of the institution you are interested in.</p>
     </div>
   </div>
 
-  <!-- Additional FAQ items can be added in the same format -->
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(4)">
+        Can I work while studying in the UK?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" id="answer-4">
+        <p>Yes, international students are allowed to work part-time during their studies, typically up to 20 hours per week during term time and full-time during holidays. However, it's important to check the specific conditions of your visa.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(5)">
+        How can I open a bank account in the UK?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" id="answer-5">
+        <p>To open a bank account, you typically need to provide proof of identity (passport), proof of address (such as a utility bill), and a student enrollment letter. Different banks may have varying requirements, so its best to check ahead. </p>
+      </div>
+    </div>
+
+      <!-- FAQ Item 6 -->
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleAnswer(6)">
+      What are the living costs in the UK?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer" id="answer-6">
+      <p>Living costs vary depending on the city, but students should budget between £9,000 to £12,000 per year for accommodation, food, transportation, and other expenses.</p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 7 -->
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleAnswer(7)">
+      How do I find accommodation?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer" id="answer-7">
+      <p>Universities often provide accommodation options for international students, including halls of residence and shared houses. Alternatively, students can search for private rentals through various online platforms.</p>
+    </div>
+  </div>
+
+    <!-- FAQ Item 8 -->
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(8)">
+        Healthcare services are available to international students?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" id="answer-8">
+        <p>International students in the UK can access the National Health Service (NHS) by paying an immigration health surcharge as part of their visa application. This allows them to receive medical treatment at the same cost as UK residents.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 9 -->
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(9)">
+        What support services are available for international students?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer" id="answer-9">
+        <p>Most universities offer support services, including orientation programs, counseling, academic assistance, and social events to help international students adjust to life in the UK. </p>
+      </div>
+    </div>
+
+      <!-- FAQ Item 10 -->
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleAnswer(10)">
+      What should I do in case of an emergency?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer" id="answer-10">
+      <p>In case of an emergency, you can call 999 for police, fire, or ambulance services. Universities also have emergency contacts and support services available for students. These FAQs can help guide international students as they prepare for their educational journey in the UK, ensuring they are well-informed and ready for the experience ahead.</p>
+    </div>
+  </div>
+
 </div>
 
 

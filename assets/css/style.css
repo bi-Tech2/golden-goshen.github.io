@@ -213,7 +213,7 @@ body.active { overflow: hidden; }
 \*-----------------------------------*/
 .hero-layout {
   width: 100%;
-  height: 90dvh;
+  height: 100dvh;
   position: relative;
   overflow: hidden; /* Hide overflowing elements */
   display: flex;
@@ -245,20 +245,34 @@ body.active { overflow: hidden; }
 }
 
 .slide1 {
-  background-image: url(../images/img/backg1.jpg);
+  background-image: url(../images/backg1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .slide2 {
-  background-image: url(../images/img/backg2.jpg);
+  background-image: url(../images/pexels-max-fischer-5212697.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
 }
 
 .slide3 {
-  background-image: url(../images/img/backg3.jpg);
+  background-image: url(../images/pexels-yankrukov-8199562.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.slide4 {
+  background-image: url(../images/r1.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.slide5 {
+  background-image: url(../images/r2.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -270,86 +284,209 @@ body.active { overflow: hidden; }
   position: relative; /* Set relative to overlay on the slider */
   z-index: 2; /* Ensure text is above the slider */
 }
-
+.search-icon{
+  background-color: hsl(210, 97%, 35%);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 6px;
+  border-radius: 50%;
+}
 .hero-text-header {
   font-size: 6.5rem;
   font-weight: 900;
   color: aliceblue;
 }
+
+
+/* Base overlay container styling */
+.ven {
+  position: fixed; /* Keep it in view and centered */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 29, 62, 0.979); /* Semi-transparent dark background */
+  z-index: 1000; /* Ensure it stays on top */
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Show overlay when active */
+.ven.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Input container styling */
+.in {
+  background: hsl(210, 81%, 15%);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  width: 86%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
-/* Basic styling for the about section */
-.about-section {
-  width: 100%;
-  padding: 50px 20px;
-  background-color: #cfd4ff;
+
+/* Container for About Us section */
+.about-us {
   display: flex;
-  color: black;
-  width: 100%;
   align-items: center;
-  justify-content: center;
-  z-index: 5;
-  align-items: center;
-  overflow: hidden;
+  padding: 50px;
+  background-color: #f8f9fa;
+  gap: 40px;
 }
 
+/* Text content styling */
 .about-content {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  max-width: 1200px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  max-width: 50%;
 }
 
-/* Responsive styling */
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.about-title {
+  font-size: 3.5rem;
+  color: #12233c;
+  margin-bottom: 20px;
 }
 
 .about-text {
-  max-width: 600px;
-}
-
-.about-header {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #313a5f;
+  line-height: 1.9;
   margin-bottom: 15px;
 }
 
-.about-description {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 10px;
+.learn-more-btn {
+  display: inline-block;
+  padding: 20px 20px;
+  background-color: hsl(210, 65%, 20%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.about-list {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: #555;
+.learn-more-btn:hover {
+  background-color: hsl(210, 90%, 25%);
+  color: #e5e5e5;
 }
 
-.about-list li {
-  margin-bottom: 8px;
+/* Image container styling */
+.about-image-container {
+  position: relative;
+  max-width: 50%;
 }
 
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
 
+/* Hover effect on the image */
+.about-image-container:hover .about-image {
+  transform: scale(1.05);
+}
+
+/* Overlay effect on image */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(0, 33, 67, 0.6), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.about-image-container:hover .image-overlay {
+  opacity: 1;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .about-content {
-      flex-direction: column;
-      align-items: center;
+  .about-us {
+    flex-direction: column;
+    padding: 30px;
   }
-  .about-header {
-      font-size: 2rem;
+
+  .about-content, .about-image-container {
+    max-width: 100%;
   }
 }
+
+/* Input field styling */
+.in .inp {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #283365;
+  border-radius: 4px;
+  outline: none;
+  background: #e5e5e5;
+}
+
+/* Search button styling */
+.in .btn {
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.in .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  padding: 0 13px;
+  right: 30px;
+  background: hsl(210, 65%, 20%);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d; /* Change color on hover */
+}
+
+/* Prevent scrolling when overlay is active */
+.no-scroll {
+  overflow: hidden;
+}
+
+
+
+
+
 /*-----------------------------------*\
   #WHAT WE OFFER
 \*-----------------------------------*/
@@ -669,6 +806,7 @@ body.active { overflow: hidden; }
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
+    text-align: left;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -678,7 +816,7 @@ body.active { overflow: hidden; }
 
   .faq-question:hover,
   .faq-question.active {
-    background-color: hsl(210, 100%, 45%);
+    background-color: hsl(218, 100%, 45%);
     color: #fff;
   }
 

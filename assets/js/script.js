@@ -99,19 +99,3 @@ slides[currentIndex].style.opacity = 1;
 setInterval(showNextSlide, 5000);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const aboutSection = document.querySelector(".about-section");
-
-  function handleScrollAnimation() {
-      const sectionPosition = aboutSection.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.2;
-
-      if (sectionPosition < screenPosition) {
-          aboutSection.classList.add("show");
-      }
-  }
-
-  window.addEventListener("scroll", handleScrollAnimation);
-});
-
-
