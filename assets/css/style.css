@@ -285,9 +285,9 @@ body.active { overflow: hidden; }
   z-index: 2; /* Ensure text is above the slider */
 }
 .search-icon{
-  background-color: hsl(210, 99%, 41%);
+  background-color: hsl(210, 90%, 25%);
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: bolder;
   padding: 6px;
   border-radius: 50%;
@@ -832,7 +832,7 @@ body.active { overflow: hidden; }
 
   .filter-button.active,
   .filter-button:hover {
-    background-color: hsl(210, 97%, 35%);
+    background-color: hsl(210, 90%, 25%);
     color: #fff;
   }
 
@@ -852,7 +852,7 @@ body.active { overflow: hidden; }
 
   .filter-content-title {
     font-size: 1.5em;
-    color: hsl(210, 100%, 45%);
+    color: hsl(210, 90%, 25%);
     margin-bottom: 10px;
   }
 
@@ -876,6 +876,47 @@ body.active { overflow: hidden; }
 
 
 .text-center { text-align: center; }
+/*-----------------------------------*\
+  #SPONSOR SECTION
+\*-----------------------------------*/
+
+.our-sponsor {
+  padding: 60px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.spon-header {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.spon-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imgg {
+  max-width: 350px;
+  max-height: 240px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .spon-imgs{
+    flex-wrap: wrap;
+  }
+}
 
 [data-reveal] {
   opacity: 0;
@@ -1053,7 +1094,7 @@ body.active { overflow: hidden; }
 /* Contact Us Section Styling */
 .contact-us-section {
   padding: 60px 20px;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
   text-align: center;
 }
 
@@ -1702,3 +1743,142 @@ body.active { overflow: hidden; }
 
 }
 
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer {
+  background-color: var(--raisin-black-1);
+  color: var(--cool-gray);
+  padding: 60px 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-bottom: 60px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer-list-title {
+  color: var(--white);
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-text {
+  margin-bottom: 30px;
+  font-size: 1em;
+  max-width: 4000px;
+  line-height: 1.6;
+  color: var(--cool-gray);
+}
+
+.footer .social-list {
+  display: flex;
+  gap: 12px;
+}
+
+.footer .social-link {
+  background-color: hsl(210, 90%, 25%);
+  padding: 14px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social-link:is(:hover, :focus) {
+  background-color: var(--majorelle-blue);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.footer-link {
+  font-size: 0.9em;
+  color: var(--cool-gray);
+  margin-top: 15px;
+  transition: color 0.3s;
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--mustard);
+  text-decoration: underline;
+}
+
+.insta-post {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 5px;
+}
+
+.insta-card {
+  position: relative;
+  border-radius: var(--radius-10);
+  overflow: hidden;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+
+
+.insta-card:is(:hover, :focus-within) {
+  transform: scale(1.05);
+}
+
+.insta-card .card-content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  color: var(--white);
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.insta-card:is(:hover, :focus-within) .card-content {
+  opacity: 1;
+}
+
+.footer-bottom {
+  color: #ffffff;
+  border-top: 19px solid rgb(255, 0, 0);
+  font-size: 0.9em;
+  padding: 20px 0;
+  border-top: 1px solid var(--onyx);
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.footer-bottom-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 15px;
+}
+
+.footer-bottom-link {
+  color: var(--cool-gray);
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.footer-bottom-link:is(:hover, :focus) {
+  color: var(--mustard);
+  text-decoration: underline;
+}
+.dev{
+  max-width: 150px;
+}
