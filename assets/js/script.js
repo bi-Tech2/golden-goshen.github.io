@@ -99,3 +99,16 @@ slides[currentIndex].style.opacity = 1;
 setInterval(showNextSlide, 5000);
 
 
+// Open overlay
+document.getElementById("searchTogg").addEventListener("click", () => {
+  var ven = document.getElementById("ven");
+  ven.classList.add("active");
+  document.body.classList.add("no-scroll");
+});
+
+// Close overlay
+document.getElementById("closeBtn").addEventListener("click", () => {
+  var ven = document.getElementById("ven");
+  ven.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+});
