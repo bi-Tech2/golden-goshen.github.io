@@ -40,6 +40,34 @@
 </head>
 
 <body>
+
+    <div class="loading-screen" id="loading-screen">
+        <!-- HTML for the Loading Screen -->
+      <div class="loading-screen">
+        <div class="loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      
+      </div>
+      
+      <!-- Your Main Content -->
+      <div id="main-content" style="display: none;">
+      
+      
+      <!-- JavaScript for delay -->
+      <script>
+        // Delay before hiding the loading screen and showing main content
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+          }, 6000); // 3000ms = 3 seconds
+        });
+      </script>
+
+
+
   <div class="ven" id="ven">
     <button class="close-btn" id="closeBtn">&times;</button>
     <div class="in">
@@ -450,11 +478,11 @@ document.getElementById("closeBtn").addEventListener("click", () => {
           </li>
 
           <li>
-            <a href="#" class="footer-link">Services</a>
+            <a href="service.html" class="footer-link">Services</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Courses</a>
+            <a href="course.html" class="footer-link">Courses</a>
           </li>
 
 
@@ -471,19 +499,19 @@ document.getElementById("closeBtn").addEventListener("click", () => {
           </li>
 
           <li>
-            <a href="#" class="footer-link">Help Center</a>
+            <a href="faq.html" class="footer-link">FAQs</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Partners</a>
+            <a href="live.html" class="footer-link">Call us now</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Suggestions</a>
+            <a href="work.html" class="footer-link">Work hours</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Blog</a>
+            <a href="blog.html" class="footer-link">Blog</a>
           </li>
 
         </ul>
@@ -642,7 +670,7 @@ document.getElementById("closeBtn").addEventListener("click", () => {
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+</div>
 </body>
 
 </html>

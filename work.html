@@ -40,30 +40,33 @@
 </head>
 
 <body>
-    <div class="loading-screen" id="loading-screen">
-        <!-- HTML for the Loading Screen -->
-      <div class="loading-screen">
-        <div class="loader">
-          <div class="spinner"></div>
-        </div>
-      </div>
-      
-      </div>
-      
-      <!-- Your Main Content -->
-      <div id="main-content" style="display: none;">
-      
-      
-      <!-- JavaScript for delay -->
-      <script>
-        // Delay before hiding the loading screen and showing main content
-        window.addEventListener("load", function () {
-          setTimeout(function () {
-            document.getElementById("loading-screen").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
-          }, 6000); // 3000ms = 3 seconds
-        });
-      </script>
+
+
+<!-- HTML -->
+<div class="loading-screen" id="loading-screen">
+  <!-- HTML for the Loading Screen -->
+<div class="loading-screen">
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+</div>
+
+<!-- Your Main Content -->
+<div id="main-content" style="display: none;">
+
+
+<!-- JavaScript for delay -->
+<script>
+  // Delay before hiding the loading screen and showing main content
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("loading-screen").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 6000); // 3000ms = 3 seconds
+  });
+</script>
 
 
   <div class="ven" id="ven">
@@ -134,7 +137,7 @@
       <div class="container">
 
         <a href="index.html" class="logo">
-          <img src="GG LOGO.png" width="216" height="80" alt="G.G.E.C home" class="w-100" style="">
+          <img src="GG LOGO.png" width="216" height="80" alt="G.G.E.C home" class="w-100">
         </a>
 
         <nav class="navbar" data-navbar>
@@ -184,21 +187,40 @@
 
 
 
-
+  <script>
+    
+    // Open overlay
+    document.getElementById("searchTogg").addEventListener("click", () => {
+      var ven = document.getElementById("ven");
+      ven.classList.add("active");
+      document.body.classList.add("no-scroll");
+    });
+    
+    // Close overlay
+    document.getElementById("closeBtn").addEventListener("click", () => {
+      var ven = document.getElementById("ven");
+      ven.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
+    
+    </script>
   <main>
     <article>
+<br><br><br>
 
-<br><br>
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.667096315396!2d-1.5528645!3d53.802658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1a1f437d8b%3A0xf6b2d253f95a0af0!2sUniversity%20Business%20Centre%20-%20Leeds%2C%20The%20Rose%20Bowl%2C%20148%20Portland%20Crescent%2C%20Leeds%20LS1%203HB%2C%20UK!5e0!3m2!1sen!2suk!4v1698575762345!5m2!1sen!2suk" 
-  width="100%" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade"
-  style="margin-top: 30px;">
-</iframe>
+<!-- Working Hours Section -->
+<section class="working-hours">
+    <h2 class="hours-title">Working Hours</h2>
+    <ul class="hours-list">
+      <li><span>Monday</span><span>9:00AM - 6:00PM</span></li>
+      <li><span>Tuesday</span><span>9:00AM - 6:00PM</span></li>
+      <li><span>Wednesday</span><span>9:00AM - 6:30PM</span></li>
+      <li><span>Thursday</span><span>10:00AM - 6:00PM</span></li>
+      <li><span>Friday</span><span>10:00AM - 5:00PM</span></li>
+    </ul>
+  </section>
+  
+
 <!-- CONTACT US SECTION -->
 <section class="contact-us-section">
   <h2 class="contact-title">Get in Touch with Us</h2>
@@ -490,23 +512,7 @@
 
     </div>
   </footer>
-  <script>
-    
-    // Open overlay
-    document.getElementById("searchTogg").addEventListener("click", () => {
-      var ven = document.getElementById("ven");
-      ven.classList.add("active");
-      document.body.classList.add("no-scroll");
-    });
-    
-    // Close overlay
-    document.getElementById("closeBtn").addEventListener("click", () => {
-      var ven = document.getElementById("ven");
-      ven.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    });
-    
-    </script>
+</div>
   <!-- 
     - custom js link
   -->
@@ -517,7 +523,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</div>
+
 </body>
 
 </html>

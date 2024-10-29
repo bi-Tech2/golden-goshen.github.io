@@ -1827,6 +1827,91 @@ body.active { overflow: hidden; }
   border-radius: 10px;
 }
 
+/* Basic Styles for Loader */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: hsl(210, 65%, 20%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loader {
+  text-align: center;
+}
+
+.loader-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Spinner Styles */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #fcfcfc;
+  border-top: 8px solid hsl(210, 90%, 25%); /* Spinner color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+/* CSS for Working Hours Section */
+.working-hours {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.hours-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1em;
+  color: #f3f3f3;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 .insta-card:is(:hover, :focus-within) {
