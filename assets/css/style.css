@@ -392,6 +392,11 @@ body.active { overflow: hidden; }
   transition: transform 0.3s ease;
   margin-top: 14px;
 }
+@media (max-width: 400px) {
+  .ironman, .captainamerica, .thor, .hulk, .spiderman, .blackwidow{
+    width: 330px;
+  }
+}
 
 .ironman:hover, .captainamerica:hover, .thor:hover, .hulk:hover, .spiderman:hover, .blackwidow:hover {
   transform: translateY(-5px);
@@ -443,8 +448,9 @@ body.active { overflow: hidden; }
 
 @media (max-width: 500px) {
   .hero-text-header {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 2.98rem;
+    font-weight: 800;
+    margin-bottom: 10px;
   }
 }
 /*-----------------------------------*\
@@ -762,13 +768,27 @@ body.active { overflow: hidden; }
 
 @media (max-width: 400px) {
   .faq-section{
-    padding: 40px 20px;
+    padding: 40px 10px;
   }
   .filter-section{
-    padding: 40px 20px;
+    padding: 40px 10px;
   }
   .study-options{
-    padding: 40px 20px;
+    padding: 40px 10px;
+  }
+  .cta-section{
+    padding: 40px 10px;
+  }
+  .cta-title {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .cta-description {
+    font-size: .9em;
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
 }
 
