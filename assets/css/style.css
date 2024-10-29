@@ -934,7 +934,7 @@ body.active { overflow: hidden; }
 
   .faq-question:hover,
   .faq-question.active {
-    background-color: hsl(218, 100%, 45%);
+    background-color: hsl(210, 90%, 25%);
     color: #fff;
   }
 
@@ -1050,6 +1050,120 @@ body.active { overflow: hidden; }
 
 
 
+/* Contact Us Section Styling */
+.contact-us-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3.4rem;
+  margin-bottom: 40px;
+  color: hsl(210, 65%, 20%);
+}
+
+/* Container Styling */
+.contact-container {
+  display: flex;
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Info Styling */
+.contact-info-container {
+  background: hsl(210, 65%, 20%); /* Semi-transparent blue */
+  color: #ffffff;
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-info {
+  text-align: left;
+  
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.contact-item ion-icon {
+  font-size: 1.8em;
+  margin-right: 15px;
+  color: #ffffff;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Form Container Styling */
+.contact-form-container {
+  flex: 2;
+  padding: 40px 30px;
+  background-color: #ffffff;
+}
+
+.contact-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid hsla(210, 91%, 25%, 0.573);
+}
+.contact-submit-button {
+  background-color: hsl(210, 65%, 20%);
+  color: #ffffff;
+  padding: 14px 28px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-submit-button:hover {
+  background-color: hsl(210, 90%, 25%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-info-container {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+}
 
 
 
