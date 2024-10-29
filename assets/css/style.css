@@ -285,7 +285,7 @@ body.active { overflow: hidden; }
   z-index: 2; /* Ensure text is above the slider */
 }
 .search-icon{
-  background-color: hsl(210, 97%, 35%);
+  background-color: hsl(210, 99%, 41%);
   color: #ffffff;
   font-size: 2rem;
   font-weight: bolder;
@@ -296,6 +296,110 @@ body.active { overflow: hidden; }
   font-size: 6.5rem;
   font-weight: 900;
   color: aliceblue;
+}
+/* Our Team Section Styling */
+.our-team {
+  padding: 50px 20px;
+  background-color: hsl(210, 65%, 20%);
+  text-align: center;
+}
+
+.team-title {
+  font-size: 3.5rem;
+  color: #f6f6f6;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+/* Team Member Container */
+.team-container {
+  display: flex;
+  gap: 35px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  position: relative;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+/* Team Member Image */
+.team-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 400px;
+}
+.up{
+  position: absolute;
+  top: 76%;
+  bottom: 0;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: linear-gradient(to bottom, #00020f99, hsl(210, 65%, 20%));
+  width: 100%;
+}
+.team-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Social Icons - Hidden initially */
+.social-icons {
+  position: absolute;
+  top: 40%;
+  left: -100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease;
+}
+
+.team-member:hover .social-icons {
+  left: 10px;
+}
+
+.icon-link {
+  color: #fff;
+  background-color: hsl(210, 65%, 20%);
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.icon-link:hover {
+  background-color: hsl(210, 90%, 25%);
+}
+
+/* Team Member Info */
+.member-name {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-top: 15px;
+  font-size: 2.2rem;
+  margin-left: 10px;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-left: 10px;
+  font-size: 1.5rem;
 }
 
 
@@ -324,7 +428,7 @@ body.active { overflow: hidden; }
 
 /* Input container styling */
 .in {
-  background: hsl(210, 81%, 15%);
+  background: hsla(210, 82%, 15%, 0.6);
   padding: 20px;
   display: flex;
   gap: 10px;
@@ -349,9 +453,23 @@ body.active { overflow: hidden; }
   gap: 40px;
 }
 
+.about-video{
+  border-radius: 20px;
+}
+
+.play-pause-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
 /* Text content styling */
 .about-content {
-  max-width: 50%;
+  max-width: 48%;
 }
 
 .about-title {
@@ -363,7 +481,7 @@ body.active { overflow: hidden; }
 .about-text {
   font-size: 1.5rem;
   color: #313a5f;
-  line-height: 1.9;
+  line-height: 2.1;
   margin-bottom: 15px;
 }
 
@@ -390,7 +508,7 @@ body.active { overflow: hidden; }
   max-width: 50%;
 }
 
-.about-image {
+.about-video {
   width: 100%;
   height: auto;
   border-radius: 15px;
@@ -440,13 +558,13 @@ body.active { overflow: hidden; }
   border: 1px solid #283365;
   border-radius: 4px;
   outline: none;
-  background: #e5e5e5;
+  background: #bbbbbb;
 }
 
 /* Search button styling */
 .in .btn {
   padding: 12px 15px;
-  background-color: #007bff;
+  background-color: hsl(210, 90%, 25%);
   color: white;
   border: none;
   border-radius: 4px;
@@ -455,7 +573,7 @@ body.active { overflow: hidden; }
 }
 
 .in .btn:hover {
-  background-color: #0056b3;
+  background-color: hsl(210, 65%, 20%);
 }
 
 /* Close button styling */
@@ -938,6 +1056,81 @@ body.active { overflow: hidden; }
 
 
 
+/* CTA Section Styling (Inverted Colors) */
+.cta-section-w {
+  color: hsl(210, 65%, 20%); /* Dark text color */
+  background-color: #ffffff; /* Light background */
+  padding: 40px 40px;
+  text-align: center;
+  margin: 30px 0;
+  max-width: 100%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-title-w {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cta-description-w {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.cta-button-w {
+  background-color: hsl(210, 65%, 20%); /* Dark button background */
+  color: #ffffff; /* Light button text color */
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 12px 15px;
+  max-width: 150px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button-w:hover {
+  background-color: #ffffff; /* Light background on hover */
+  color: hsl(210, 65%, 20%); /* Dark text color on hover */
+  box-shadow: 0 0 3px gainsboro;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+  .faq-section-w {
+    padding: 40px 10px;
+  }
+  .filter-section-w {
+    padding: 40px 10px;
+  }
+  .study-options-w {
+    padding: 40px 10px;
+  }
+  .cta-section-w {
+    padding: 40px 10px;
+  }
+  .cta-title-w {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .cta-description-w {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+
 
 
 
@@ -1394,3 +1587,4 @@ body.active { overflow: hidden; }
   }
 
 }
+
