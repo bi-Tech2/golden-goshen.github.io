@@ -38,7 +38,9 @@
   <link rel="preload" as="image" href="./assets/images/backg2.jpg">
 
 </head>
-
+<script>
+    
+</script>
 <body>
     <div class="loading-screen" id="loading-screen">
         <!-- HTML for the Loading Screen -->
@@ -134,7 +136,7 @@
       <div class="container">
 
         <a href="index.html" class="logo">
-          <img src="GG LOGO.png" width="216" height="80" alt="G.G.E.C home" class="w-100" style="">
+          <img loading="eager" src="GG LOGO.png" width="216" height="80" alt="G.G.E.C home" class="w-100" style="">
         </a>
 
         <nav class="navbar" data-navbar>
@@ -208,10 +210,8 @@
         </div>
         <!-- About Us Video Section -->
         <div class="about-image-container">
-          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" class="about-video" id="aboutVideo"></video>
-          <div class="play-pause-icon" id="playPauseIcon">
-            <ion-icon name="play-circle-outline"></ion-icon>
-          </div>
+          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" class="about-video" autoplay controls volume="50%"></video>
+          
         </div>
         
         </section>
@@ -276,7 +276,7 @@
 
         <div class="footer-brand" style="max-width: 300px;">
 
-          <p class="footer-list-title" style="justify-content: flex-start;display: flex;text-align: center;align-content:flex-start;"><img src="GG LOGO.png" alt="" style="width: 70px; height: auto;"><b class="io" style="margin-top: 5%; margin-left: 10px;">G.G.E.C</b></p>
+          <p class="footer-list-title" style="justify-content: flex-start;display: flex;text-align: center;align-content:flex-start;"><img loading="eager" src="GG LOGO.png" alt="" style="width: 70px; height: auto;"><b class="io" style="margin-top: 5%; margin-left: 10px;">G.G.E.C</b></p>
 
           <p class="footer-text">
             A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
@@ -387,7 +387,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -402,7 +402,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -417,7 +417,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -432,7 +432,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -447,7 +447,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -462,7 +462,7 @@
                 <div class="insta-card">
 
                   <figure class="post-banner">
-                    <img src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
                       alt="instagram post" class="img-cover">
                   </figure>
 
@@ -509,44 +509,7 @@
   </footer>
   <script>
 
-const video = document.getElementById("aboutVideo");
-const playPauseIcon = document.getElementById("playPauseIcon");
-const playIcon = "play-circle-outline";
-const pauseIcon = "pause-circle-outline";
-
-// Toggle play/pause on click
-playPauseIcon.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playPauseIcon.innerHTML = `<ion-icon name="${pauseIcon}"></ion-icon>`;
-  } else {
-    video.pause();
-    playPauseIcon.innerHTML = `<ion-icon name="${playIcon}"></ion-icon>`;
-  }
-});
-
-// Update icon when video ends
-video.addEventListener("ended", () => {
-  playPauseIcon.innerHTML = `<ion-icon name="${playIcon}"></ion-icon>`;
-});
-
-
-
-
-document.getElementById("onlineTab").addEventListener("click", function() {
-  document.getElementById("onlineCourses").style.display = "flex";
-  document.getElementById("inPersonCourses").style.display = "none";
-  this.classList.add("active");
-  document.getElementById("inPersonTab").classList.remove("active");
-});
-
-document.getElementById("inPersonTab").addEventListener("click", function() {
-  document.getElementById("inPersonCourses").style.display = "flex";
-  document.getElementById("onlineCourses").style.display = "none";
-  this.classList.add("active");
-  document.getElementById("onlineTab").classList.remove("active");
-});
-
+    
     
     // Open overlay
     document.getElementById("searchTogg").addEventListener("click", () => {
@@ -566,7 +529,7 @@ document.getElementById("inPersonTab").addEventListener("click", function() {
   <!-- 
     - custom js link
   -->
-  <script src="assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
   <!-- 
     - ionicon link
