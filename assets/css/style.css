@@ -1889,6 +1889,98 @@ body.active { overflow: hidden; }
   padding: 0;
   margin: 0;
 }
+/* Container Styling */
+.container-thor {
+  max-width: 100%;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #f2f2f2;
+}
+
+/* Section Titles */
+.service-ironman h1,
+.why-hulk h2,
+.services-stark h2,
+.how-to-fury h2,
+.register-groot h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.service-ironman h1{
+  font-size: 2.8rem;
+}
+/* Cards Layout */
+.cards-captain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.gen{
+  color: #1b2d4a;
+  text-align: center;
+}
+
+.card-thanos, .card-loki, .card-spiderman {
+  background-color: #d8d8d8;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-thanos h2, .card-loki h2, .card-spiderman h2 {
+  color: hsl(210, 65%, 20%);
+}
+
+/* Service Items */
+.service-item-blackwidow, .service-item-hawkeye, .service-item-vision, .service-item-wanda, .service-item-panther {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.service-item-blackwidow h3,
+.service-item-hawkeye h3,
+.service-item-vision h3,
+.service-item-wanda h3,
+.service-item-panther h3 {
+  color: hsl(208, 100%, 97%);
+}
+.ol{
+  display: flex; 
+  justify-content: space-between;overflow-x: scroll; 
+  gap: 3.2rem;
+}
+.ol::-webkit-scrollbar{
+  display: none;
+}
+.rotten{
+  min-width: 320px;
+  padding: 15px 20px;
+  background: hsl(210, 90%, 25%);
+  border-radius: 20px;
+}
+.rare{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.cut{
+  align-items: center; 
+  width: 100%; 
+  align-content: center; 
+  object-position: center;
+  display: flex;
+  flex-direction: column;
+}
+.register-link{
+  background-color: hsl(210, 68%, 28%);
+  color: #e5e5e5;
+  padding: 16px 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 
 .hours-list li {
   display: flex;
