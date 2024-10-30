@@ -112,3 +112,42 @@ document.getElementById("closeBtn").addEventListener("click", () => {
   ven.classList.remove("active");
   document.body.classList.remove("no-scroll");
 });
+
+
+const video = document.getElementById("aboutVideo");
+const playPauseIcon = document.getElementById("playPauseIcon");
+const playIcon = "play-circle-outline";
+const pauseIcon = "pause-circle-outline";
+
+// Toggle play/pause on click
+playPauseIcon.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    playPauseIcon.innerHTML = `<ion-icon name="${pauseIcon}"></ion-icon>`;
+  } else {
+    video.pause();
+    playPauseIcon.innerHTML = `<ion-icon name="${playIcon}"></ion-icon>`;
+  }
+});
+
+// Update icon when video ends
+video.addEventListener("ended", () => {
+  playPauseIcon.innerHTML = `<ion-icon name="${playIcon}"></ion-icon>`;
+});
+
+
+
+
+document.getElementById("onlineTab").addEventListener("click", function() {
+  document.getElementById("onlineCourses").style.display = "flex";
+  document.getElementById("inPersonCourses").style.display = "none";
+  this.classList.add("active");
+  document.getElementById("inPersonTab").classList.remove("active");
+});
+
+document.getElementById("inPersonTab").addEventListener("click", function() {
+  document.getElementById("inPersonCourses").style.display = "flex";
+  document.getElementById("onlineCourses").style.display = "none";
+  this.classList.add("active");
+  document.getElementById("onlineTab").classList.remove("active");
+});

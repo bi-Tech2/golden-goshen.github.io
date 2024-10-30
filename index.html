@@ -9,9 +9,9 @@
   <!-- 
     - primary meta tags
   -->
-  <title>G G - Great coffee good vibes</title>
-  <meta name="title" content="Keofi - Great coffee good vibes">
-  <meta name="description" content="This is a coffee shop html template made by codewithsadee">
+  <title>G.G.E.C - Your Gateway to Global Education</title>
+  <meta name="title" content="G.G.E.C - Your Gateway to Global Education">
+  <meta name="description" content="This is a coffee shop html template made by BiTech">
 
   <!-- 
     - favicon
@@ -40,6 +40,35 @@
 </head>
 
 <body>
+
+
+<!-- HTML -->
+<div class="loading-screen" id="loading-screen">
+  <!-- HTML for the Loading Screen -->
+<div class="loading-screen">
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+</div>
+
+<!-- Your Main Content -->
+<div id="main-content" style="display: none;">
+
+
+<!-- JavaScript for delay -->
+<script>
+  // Delay before hiding the loading screen and showing main content
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("loading-screen").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 6000); // 3000ms = 3 seconds
+  });
+</script>
+
+
   <div class="ven" id="ven">
     <button class="close-btn" id="closeBtn">&times;</button>
     <div class="in">
@@ -108,7 +137,7 @@
       <div class="container">
 
         <a href="index.html" class="logo">
-          <img src="GG LOGO.png" width="216" height="80" alt="keofi home" class="w-100" style="">
+          <img loading="eager" src="GG LOGO.png" width="216" height="80" alt="G.G.E.C home" class="w-100">
         </a>
 
         <nav class="navbar" data-navbar>
@@ -116,11 +145,11 @@
           <ul class="navbar-list">
 
             <li>
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
             </li>
 
             <li>
-              <a href="#about" class="navbar-link" data-nav-link>About</a>
+              <a href="about.html" class="navbar-link" data-nav-link>About</a>
             </li>
 
             <li>
@@ -128,7 +157,11 @@
             </li>
 
             <li>
-              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+              <a href="service.html" class="navbar-link" data-nav-link>Searvices</a>
+            </li>
+
+            <li>
+              <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
             </li>
 
             <li>
@@ -193,11 +226,15 @@
           </p>
           <a href="about.html" class="learn-more-btn btn">Learn More</a>
         </div>
+        <!-- About Us Video Section -->
         <div class="about-image-container">
-          <img src="assets/images/pexels-armin-rimoldi-5553055.jpg" alt="About Us Image" class="about-image">
-          <div class="image-overlay"></div>
+          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" class="about-video" id="aboutVideo"></video>
+          <div class="play-pause-icon" id="playPauseIcon">
+            <ion-icon name="play-circle-outline"></ion-icon>
+          </div>
         </div>
-      </section>
+        
+        </section>
       
 
 
@@ -209,7 +246,7 @@
   <div class="cta-content">
     <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
     <p class="cta-description">Join our community and gain access to world-class resources, expert instructors, and a path to achieving your goals. Don’t wait—enroll now and take the first step!</p>
-    <a href="#enroll" class="cta-button">Apply Now</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="cta-button">Apply Now</a>
   </div>
 </div>
 
@@ -368,6 +405,126 @@
 </div>
 
 
+<!--
+#TEAM MEMBERS-->
+<section class="our-team">
+
+  <div class="our-sponsor">
+    <h2 class="spon-header">Our Partners </h2>
+    <div class="spon-imgs">
+      <img loading="eager" src="assets/images/spon3.jpg" alt="" class="imgg">
+      <div class="imgg" style="background-color: #000; padding: 5px; border-radius: 10px;"><img loading="eager" src="assets/images/spon1.jpg" alt="" width="90%" height="90%"></div>
+    <img loading="eager" src="assets/images/spon2.jpg" alt="" class="imgg">
+    <img loading="eager" src="assets/images/spon4.jpg" alt="" class="imgg">
+    </div>
+  </div>
+
+
+  <h2 class="team-title">Meet Our Team</h2>
+  <div class="team-container">
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t1.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Daniel Vincent</h3>
+      <p class="member-role">Managing Director</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t2.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Angel Uju</h3>
+      <p class="member-role">Non - Executive Director</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t3.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Noel Kelechi
+          </h3>
+      <p class="member-role">IT Solution</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t4.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Jacinta Oseghale
+        </h3>
+      <p class="member-role">United States Coordinator</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t7.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Francisca Onwufuju
+          
+          </h3>
+      <p class="member-role">Education Support Lead</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-image-container">
+        <img loading="eager" src="assets/images/t1.jpg" alt="Team Member 1" class="team-image">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+      <div class="up">
+        <h3 class="member-name">Josh Dickson</h3>
+      <p class="member-role">Software Engineer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- CTA SECTION White -->
+<div class="cta-section-w">
+  <div class="cta-content-w">
+    <h2 class="cta-title-w">Ready to Start Your Learning Journey?</h2>
+    <p class="cta-description-w">Join our community and gain access to world-class resources, expert instructors, and a path to achieving your goals. Don’t wait—enroll now and take the first step!</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="cta-button-w">Apply Now</a>
+  </div>
+</div>
+
 
 <script>
   // JavaScript to handle filter toggle
@@ -517,13 +674,310 @@
 </script>
 
 
+
+<br><br>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.667096315396!2d-1.5528645!3d53.802658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1a1f437d8b%3A0xf6b2d253f95a0af0!2sUniversity%20Business%20Centre%20-%20Leeds%2C%20The%20Rose%20Bowl%2C%20148%20Portland%20Crescent%2C%20Leeds%20LS1%203HB%2C%20UK!5e0!3m2!1sen!2suk!4v1698575762345!5m2!1sen!2suk" 
+  width="100%" 
+  height="350" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade"
+  style="margin-top: 30px;">
+</iframe>
+<!-- CONTACT US SECTION -->
+<section class="contact-us-section">
+  <h2 class="contact-title">Get in Touch with Us</h2>
+  <div class="contact-container">
+    
+    <!-- Contact Info Section -->
+    <div class="contact-info-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <ion-icon name="call-outline"></ion-icon>
+          <p>+44 20 1234 5678</p>
+        </div>
+        <div class="contact-item">
+          <ion-icon name="mail-outline"></ion-icon>
+          <p>info@ourcompany.com</p>
+        </div>
+        <div class="contact-item">
+          <ion-icon name="location-outline"></ion-icon>
+          <p>148 Rose Bowl, Portland Crescent, Leeds, LS1 3HB, UK</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="contact-form-container">
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        
+        <button type="submit" class="contact-submit-button">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
     </article>
   </main>
 
 
 
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand" style="max-width: 300px;">
+
+          <p class="footer-list-title" style="justify-content: flex-start;display: flex;text-align: center;align-content:flex-start;"><img loading="eager" src="GG LOGO.png" alt="" style="width: 70px; height: auto;"><b class="io" style="margin-top: 5%; margin-left: 10px;">G.G.E.C</b></p>
+
+          <p class="footer-text">
+            A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.x.com/goldengoshenedu" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://www.instagram.com/goldengosheneducation" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+<!--           
+          <ul class="dif">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae corporis rerum tempore deserunt earum explicabo. Expedita eum officiis illum asperiores?
+          </ul> -->
+        </div>
+        
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Usefull Links</p>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="service.html" class="footer-link">Services</a>
+          </li>
+
+          <li>
+            <a href="course.html" class="footer-link">Courses</a>
+          </li>
 
 
+          <li>
+            <a href="terms.html" class="footer-link">Terms & Services</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Community</p>
+          </li>
+
+          <li>
+            <a href="faq.html" class="footer-link">FAQs</a>
+          </li>
+
+          <li>
+            <a href="live.html" class="footer-link">Call us now</a>
+          </li>
+
+          <li>
+            <a href="work.html" class="footer-link">Work hours</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="footer-link">Blog</a>
+          </li>
+
+        </ul>
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Location</p>
+          </li>
+            <p class="dev">University Business Centre- Leeds,
+              148 Rose Bowl, Portland Crescent,
+              LS1 3HB Leeds, United Kingdom.
+              </p>
+
+        </ul>
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Instagram post</p>
+          </li>
+
+          <li>
+            <ul class="insta-post">
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img loading="eager" src="./assets/images/image1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <hr style="border: 1px solid rgb(127, 138, 255);">
+
+      <div class="footer-bottom" style="display: flex;justify-content: space-between;">
+
+        <p class="copyright">
+          &copy; 2024 G.G.E.C All Rights Reserved by BiTech
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="terms.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+
+          <li>
+            <a href="privacy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="footer-bottom-link">Login / Signup</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+</div>
   <!-- 
     - custom js link
   -->
