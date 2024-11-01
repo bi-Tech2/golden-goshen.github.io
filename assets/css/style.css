@@ -251,7 +251,7 @@ body.active { overflow: hidden; }
 }
 
 .slide2 {
-  background-image: url(../images/pexels-max-fischer-5212697.jpg);
+  background-image: url(../images/run.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -272,7 +272,7 @@ body.active { overflow: hidden; }
 }
 
 .slide5 {
-  background-image: url(../images/r2.jpg);
+  background-image: url(../images/ruin.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -2058,4 +2058,186 @@ body.active { overflow: hidden; }
 }
 .dev{
   max-width: 150px;
+}
+
+/* Blog Card Styling */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border: 1px solid hsl(210, 68%, 28%);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 10, 0.199);
+  background-color: hsl(210, 65%, 20%);
+  margin: 20px;
+  position: relative;
+}
+.categories{
+  position: absolute;
+  top: 31%;
+  right: 0;
+  padding: 2px 5px;
+}
+.cat{
+  background-color: hsl(210, 65%, 20%);
+  padding: 2.4px 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+/* Image Section */
+.blog-card-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Content Section */
+.blog-card-content {
+  padding: 15px;
+}
+
+/* Title */
+.blog-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Excerpt */
+.blog-excerpt {
+  font-size: 14px;
+  color: #aeaeae;
+  margin-bottom: 10px;
+}
+
+/* Meta Information */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #b4c2ff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.meta-info span,
+.category-tag {
+  display: flex;
+  align-items: center;
+}
+
+.meta-info .author,
+.meta-info .date {
+  margin-right: 10px;
+}
+
+.icon-user,
+.icon-calendar,
+.icon-tag {
+  margin-right: 5px;
+}
+
+/* Engagement Stats */
+.blog-engagement {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-engagement span {
+  display: flex;
+  align-items: center;
+}
+
+.icon-clock,
+.icon-comment,
+.icon-eye {
+  margin-right: 5px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.read-more-btn i {
+  margin-left: 5px;
+}
+
+.read-more-btn:hover {
+  color: #004a99;
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal-info .modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+.modal-engagement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.share-options {
+    display: flex;
+    gap: 10px;
 }

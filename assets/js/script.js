@@ -44,7 +44,7 @@ addEventOnElements(navbarLinks, "click", closeNavbar);
 const header = document.querySelector("[data-header]");
 
 const activeElemOnScroll = function () {
-  if (window.scrollY >= 50) {
+  if (window.scrollY >= 20) {
     header.classList.add("active");
   } else {
     header.classList.remove("active");
@@ -86,10 +86,21 @@ let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
+// Initialize all slides to invisible except the first one
+slides.forEach((slide, index) => {
+    slide.style.opacity = index === 0 ? 1 : 0;
+    slide.style.position = 'absolute';
+    slide.style.transition = 'opacity 1s ease';
+});
+
 function showNextSlide() {
-    slides[currentIndex].style.opacity = 0; // Fade out current slide
-    currentIndex = (currentIndex + 1) % totalSlides; // Move to next slide
-    slides[currentIndex].style.opacity = 1; // Fade in next slide
+    const currentSlide = slides[currentIndex];
+    currentIndex = (currentIndex + 1) % totalSlides;
+    const nextSlide = slides[currentIndex];
+
+    // Show next slide immediately as the current slide fades out
+    nextSlide.style.opacity = 1;         // Fade in next slide
+    currentSlide.style.opacity = 0;      // Fade out current slide
 }
 
 // Show the first slide
@@ -97,6 +108,7 @@ slides[currentIndex].style.opacity = 1;
 
 // Change slides every 5 seconds
 setInterval(showNextSlide, 5000);
+
 
 
 // Open overlay
@@ -151,3 +163,20 @@ document.getElementById("inPersonTab").addEventListener("click", function() {
   this.classList.add("active");
   document.getElementById("onlineTab").classList.remove("active");
 });
+
+
+
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+  }
+};
