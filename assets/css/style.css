@@ -252,6 +252,7 @@ body.active { overflow: hidden; }
 
 .slide2 {
   background-image: url(../images/run.jpg);
+  background-image: url(../images/pexels-max-fischer-5212697.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -273,6 +274,7 @@ body.active { overflow: hidden; }
 
 .slide5 {
   background-image: url(../images/ruin.jpg);
+  background-image: url(../images/r2.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0; /* Initially hidden */
@@ -586,6 +588,9 @@ body.active { overflow: hidden; }
   border-bottom-left-radius: 20px;
   color: white;
   font-size: 4rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
   outline: none;
