@@ -188,7 +188,8 @@
 <br><br><br>
 
 
-<!-- Blog Card 1 -->
+<div class="blog-card-parent">
+    <!-- Blog Card 1 -->
 <div class="blog-card">
     <div class="blog-card-image">
         <img src="./assets/images/r2.jpg" alt="Blog Thumbnail">
@@ -213,7 +214,7 @@
         <div class="cat">Health</div>
     </div>
 </div>
-
+    
 <!-- Blog Card 2 (Add more blog cards here following the same structure) -->
 <div class="blog-card">
     <div class="blog-card-image">
@@ -239,6 +240,34 @@
         <div class="cat">Health</div>
     </div>
 </div>
+<!-- Blog Card 3 -->
+    <div class="blog-card">
+        <div class="blog-card-image">
+            <img src="./assets/images/r1.jpg" alt="Blog Thumbnail">
+        </div>
+        <div class="blog-card-content">
+            <h2 class="blog-title">How to Study in the UK on a Budget</h2>
+            <p class="blog-excerpt">Learn the tips and tricks for studying in the UK affordably...</p>
+            <div class="blog-meta">
+                <span class="author"><i class="icon-user"></i> Jane Doe</span>
+                <span class="date"><i class="icon-calendar"></i> October 30, 2024</span>
+            </div>
+            <div class="blog-engagement">
+                <span class="reading-time"><i class="icon-clock"></i> 5 min read</span>
+                <span class="comments-count"><i class="icon-comment"></i> 23 comments</span>
+                <span class="views-count"><i class="icon-eye"></i> 1.5k views</span>
+            </div>
+            <a class="read-more-btn" onclick="openModal('modal3')">Read More <i class="icon-arrow-right"></i></a>
+        </div>
+        <div class="categories">
+            <div class="cat">lifestyle</div>
+            <div class="cat">School</div>
+            <div class="cat">Health</div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Popup Modal for Blog Card 1 -->
 <div id="modal1" class="modal">
     <div class="modal-content">
@@ -301,8 +330,36 @@
     </div>
 </div>
 
-
-
+<!-- Popup Modal for Blog Card 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-image">
+            <img src="./assets/images/r1.jpg" alt="Full Blog Thumbnail">
+        </div>
+        <div class="modal-info">
+            <h2 class="modal-title">How to Study in the UK on a Budget</h2>
+            <p class="modal-excerpt">
+                Learn the tips and tricks for studying in the UK affordably. Discover scholarships, housing options, and budgeting techniques in-depth.
+            </p>
+            <div class="modal-meta">
+                <span class="author"><i class="icon-user"></i> Jane Doe</span>
+                <span class="date"><i class="icon-calendar"></i> October 30, 2024</span>
+                <span class="reading-time"><i class="icon-clock"></i> 5 min read</span>
+                <span class="views-count"><i class="icon-eye"></i> 1.5k views</span>
+            </div>
+            <div class="modal-engagement">
+                <span class="comments-count"><i class="icon-comment"></i> 23 comments</span>
+                <div class="share-options">
+                    <span>Share:</span>
+                    <a href="#" class="share-icon"><i class="icon-facebook"></i></a>
+                    <a href="#" class="share-icon"><i class="icon-twitter"></i></a>
+                    <a href="#" class="share-icon"><i class="icon-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
