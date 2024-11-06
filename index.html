@@ -12,7 +12,7 @@
   <title>G.G.E.C.L - Your Gateway to Global Education</title>
   <meta name="title" content="G.G.E.C.L - Your Gateway to Global Education">
   
-
+<script src="new.js"></script>
   <!-- 
     - favicon
   -->
@@ -230,10 +230,7 @@
         </div>
         <!-- About Us Video Section -->
         <div class="about-image-container">
-          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" class="about-video" id="aboutVideo"></video>
-          <div class="play-pause-icon" id="playPauseIcon">
-            <ion-icon name="play-circle-outline"></ion-icon>
-          </div>
+          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" controls></video>
         </div>
         
         </section>
@@ -420,7 +417,7 @@
     <img loading="eager" src="assets/images/spon2.jpg" alt="" class="imgg"><img loading="eager" src="assets/images/spon5.jpg" alt="" class="imgg">
     <img loading="eager" src="assets/images/spon4.jpg" alt="" class="imgg">
     </div>
-  </div>
+  <!-- </div>
   <section class="courses-highlight">
     <h2>Our Courses</h2>
     <div class="course-option">
@@ -435,8 +432,8 @@
             <a href="offline-courses.html" class="view-more">View More</a>
         </div>
     </div>
-</section>
-<style>
+</section> -->
+<!-- <style>
   .courses-highlight {
     width: 100%;
     text-align: left;
@@ -465,7 +462,7 @@
     text-decoration: underline;
 }
 
-</style>
+</style> -->
 
   <h2 class="team-title">Meet Our Team</h2>
   <div class="team-container">
@@ -775,17 +772,35 @@
 
     <!-- Form Section -->
     <div class="contact-form-container">
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" id="contact-form">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        
-        <button type="submit" class="contact-submit-button">Send Message</button>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Your Message"
+          required
+        ></textarea>
+
+        <button class="contact-submit-button">Send Message</button>
       </form>
     </div>
 

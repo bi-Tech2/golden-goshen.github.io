@@ -432,14 +432,15 @@ body.active { overflow: hidden; }
 .in {
   background: hsla(210, 82%, 15%, 0.6);
   padding: 20px;
-  display: flex;
   gap: 10px;
   align-items: center;
   border-radius: 8px;
   width: 86%;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
-
+.in input{
+  width: 100%;
+}
 
 /*-----------------------------------*\
   #ABOUT
@@ -561,6 +562,7 @@ body.active { overflow: hidden; }
   border-radius: 4px;
   outline: none;
   background: #bbbbbb;
+  width: 100%;
 }
 
 /* Search button styling */
